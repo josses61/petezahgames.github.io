@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin Portal | Pete Zah</title>
+<link rel="icon" type="image/x-icon" href="/logo.png">
+<link rel="stylesheet" href="/storage/css/styles.css">
+</head>
+<body onload="renderAdminUsers()">
+<div style="max-width:900px;margin:60px auto;padding:20px;border:1px solid #333;border-radius:10px; background:#f6f6f6;">
+  <h2>Admin Panel</h2>
+  <button onclick="adminLogout()" style="margin-bottom:12px;padding:8px;">Logout</button>
+  <button onclick="sendCodeToAll()" style="margin-bottom:12px;padding:8px;">Send new verification codes to all users (mailto)</button>
+  <p id="admin-send-message" style="font-weight:bold;"></p>
+  <table id="admin-user-table" style="width:100%;border-collapse:collapse;">
+    <tr><th style="border:1px solid #666;padding:6px;">Username</th><th style="border:1px solid #666;padding:6px;">Email</th><th style="border:1px solid #666;padding:6px;">Code</th><th style="border:1px solid #666;padding:6px;">Created</th></tr>
+  </table>
+</div>
+<script src="/storage/js/auth.js"></script>
+</body>
+</html>

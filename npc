@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# npc stub runner for this static site project
+# install: no dependencies required for this repo
+# start: run the local static web server
+
+CMD="$1"
+
+case "$CMD" in
+  install)
+    echo "Running npc install"
+    if [[ -f package.json ]]; then
+      npm install
+    else
+      echo "No package.json found. Nothing to install (static site)."
+    fi
+    ;;
+  start)
+    echo "Running npc start"
+    chmod +x ./run.sh 2>/dev/null || true
+    ./run.sh
+    ;;
+  *)
+    echo "Usage: npc {install|start}"
+    exit 1
+    ;;
+esac

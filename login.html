@@ -1,0 +1,22 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login | Pete Zah</title>
+<link rel="icon" type="image/x-icon" href="/logo.png">
+<link rel="stylesheet" href="/storage/css/styles.css">
+</head>
+<body>
+<div style="max-width:450px;margin:80px auto;padding:20px;border:1px solid #ccc;border-radius:10px; background:#f9f9f9;">
+  <h2>Sign In</h2>
+  <label>Username or Email</label><br>
+  <input id="login-user" type="text" style="width:100%;padding:8px;margin:6px 0;"><br>
+  <label>Password</label><br>
+  <input id="login-password" type="password" style="width:100%;padding:8px;margin:6px 0;"><br>
+  <button onclick="loginUser()" style="width:100%;padding:10px;margin:10px 0;">Login</button>
+  <p id="login-message"></p>
+  <p>New user? <a href="/signup.html">Sign up here</a></p>
+  <p>Admin? <a href="/admin-login.html">Admin login</a></p>
+</div>
+<script src="/storage/js/auth.js"></script>
+</body>
+</html>

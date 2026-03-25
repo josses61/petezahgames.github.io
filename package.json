@@ -1,0 +1,9 @@
+{
+  "name": "petezahgames-github-io",
+  "version": "1.0.0",
+  "description": "Static unblocked games site",
+  "scripts": {
+    "start": "./run.sh",
+    "install": "echo 'No dependencies required for this static site'"
+  }
+}

@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pete Zah | Home</title>
+  <link rel="icon" type="image/x-icon" href="/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/storage/css/styles.css">
+  <link rel="stylesheet" href="/storage/css/footer.css">
+  <style>
+    .spa-section { display: none; }
+    .spa-section.active { display: block; }
+    .spa-nav button { margin: 4px; padding: 8px 10px; }
+    .dx-box { max-width: 500px; margin: 16px auto; background: #fafafa; border: 1px solid #ddd; padding: 16px; border-radius: 10px; }
+    .dx-box input { width: 100%; margin: 6px 0; padding: 8px; }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <a href="/home.html">
+        <img src="/logo.png" class="logo">
+        <p class="nav-text">Pete Zah</p>
+      </a>
+    </div>
+    <div class="navbar-right spa-nav">
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('signup')">Sign Up</button>
+      <button onclick="showPage('login')">Login</button>
+      <button onclick="showPage('admin')">Admin</button>
+    </div>
+  </div>
+
+  <section id="home" class="spa-section">
+    <div class="banner">
+      <h1>Pete Zah Games</h1>
+      <p>Play over 100+ free games consisting of HTML, Flash, and Web Retro.</p>
+      <div class="buttons-container">
+        <a href="/games.html"><button class="sigma">Explore Games</button></a>
+        <a href="https://discord.com/channels/1316946382665551903/"><button class="discord">Discord</button></a>
+      </div>
+    </div>
+
+    <h3>Reviews From Pete Zah Users!</h3>
+    <div class="review-container">
+      <div class="review-box"><p>Pete Zah gave me meaning in life, before Pete Zah I was bored, lonely, and homeless, but now, I'm just lonely and homeless.</p><div class="bottom-left"><i class="fab fa-discord"></i><h6>jolly szvy</h6></div></div>
+      <div class="review-box"><p>Pete Zah has many links and a variety of games to play, if i could i'd give a 15/10</p><div class="bottom-left"><i class="fab fa-discord"></i><h6>Voucan</h6></div></div>
+      <div class="review-box"><p>school was boring bc all of the really cool and fun sites i would play on with my friends would always get blocked after just a month of use! now, i found the Bruny sites, and because of the site generator, it will never be blocked!</p><div class="bottom-left"><i class="fab fa-discord"></i><h6>idkiguess</h6></div></div>
+    </div>
+
+    <hr>
+    <h3>FAQ (Frequently Asked Questions)</h3>
+    <div class="container-hero"><div class="text-box"><h2>Are there more links?</h2><p>No, however I can make more links if needed.</p></div></div>
+    <div class="container-hero"><div class="text-box"><h2>Why this logo?</h2><p>It is abstract and cool.</p></div></div>
+    <div class="container-hero"><div class="text-box"><h2>What separates Pete Zah Games?</h2><p>Pete Zah is more than a gaming site; it is life.</p></div></div>
+  </section>
+
+  <section id="signup" class="spa-section">
+    <div class="dx-box">
+      <h2>Sign Up</h2>
+      <label>Username</label>
+      <input id="signup-name" type="text" placeholder="Your username">
+      <label>Email</label>
+      <input id="signup-email" type="email" placeholder="you@example.com">
+      <label>Password</label>
+      <input id="signup-password" type="password" placeholder="Password">
+      <button onclick="signUp()">Create Account</button>
+      <p id="signup-message"></p>
+    </div>
+  </section>
+
+  <section id="login" class="spa-section">
+    <div class="dx-box">
+      <h2>Login</h2>
+      <label>Username or Email</label>
+      <input id="login-user" type="text" placeholder="Username or Email">
+      <label>Password</label>
+      <input id="login-password" type="password" placeholder="Password">
+      <button onclick="loginUser()">Login</button>
+      <p id="login-message"></p>
+    </div>
+  </section>
+
+  <section id="admin" class="spa-section">
+    <div class="dx-box">
+      <h2>Admin Portal</h2>
+      <label>Username</label>
+      <input id="admin-user" type="text" placeholder="Admin username">
+      <label>Password</label>
+      <input id="admin-password" type="password" placeholder="Admin password">
+      <button onclick="adminLogin()">Admin Login</button>
+      <p id="admin-message"></p>
+    </div>
+    <div id="admin-work" style="display:none; margin:16px;">
+      <button onclick="adminLogout()">Logout</button>
+      <button onclick="sendCodeToAll()">Send codes to all users</button>
+      <p id="admin-send-message"></p>
+      <table id="admin-user-table" style="width:100%;border-collapse:collapse;"></table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footerContainer">
+      <div class="socialIcons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/PeteZahGames"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footerNav">
+        <ul><li><a href="/home.html">Home</a></li><li><a href="/contact.html">Contact Us</a></li><li><a href="/partners.html">Our Team</a></li><li><a href="/legal.html">Privacy</a></li></ul>
+      </div>
+    </div>
+    <div class="footerBottom"><p>Copyright &copy;2024; Designed by <span class="designer">Pete Zah</span></p></div>
+  </footer>
+
+  <script src="/storage/js/auth.js"></script>
+  <script>
+    function showPage(page) {
+      ['home','signup','login','admin'].forEach(p=>{
+        const el=document.getElementById(p);
+        if(el) el.classList.toggle('active', p===page);
+      });
+      history.replaceState(null,'',`#${page}`);
+      if(page==='admin') {
+        const work=document.getElementById('admin-work');
+        work.style.display = localStorage.getItem('petezahgames_admin_logged_in')==='true' ? 'block' : 'none';
+        renderAdminUsers();
+      }
+    }
+
+    function checkAdminState() {
+      if (localStorage.getItem('petezahgames_admin_logged_in')==='true') {
+        document.getElementById('admin-work').style.display='block';
+      }
+    }
+
+    const originalAdminLogin = adminLogin;
+    window.adminLogin = function() {
+      originalAdminLogin();
+      setTimeout(()=>{ checkAdminState(); renderAdminUsers(); }, 300);
+    };
+
+    window.addEventListener('load', ()=>{
+      const hash = location.hash.replace('#','') || 'home';
+      showPage(['home','signup','login','admin'].includes(hash) ? hash : 'home');
+      checkAdminState();
+    });
+  </script>
+</body>
+</html>

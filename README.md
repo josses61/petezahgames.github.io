@@ -16,4 +16,15 @@ You're mainly supposed to use our site at places that have restrictions.
 ## Summary
 Pete Zah Games is a unblocked games and proxy service meant for you to use at school or work but you can use it at home to. Pete Zah Games provides many games which are all self hosted meaning all content is stored in the website.
 
+## Run locally (codespace)
+From workspace root, run:
+
+```
+./run.sh
+```
+
+Then visit:
+
+- http://localhost:8000/home.html
+
 
